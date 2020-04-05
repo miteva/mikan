@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Agriculture machines</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!machines"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="machines">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let machine of machines">
+    <td>{{ machine.name }}</td>
+    <td>{{ machine.description }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<app-add-machine></app-add-machine>
