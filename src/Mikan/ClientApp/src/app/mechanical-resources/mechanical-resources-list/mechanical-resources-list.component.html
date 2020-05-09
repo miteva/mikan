@@ -1,0 +1,15 @@
+<button (click)="new()">Креирај</button>
+<table>
+  <tr>
+    <td>Име</td>
+    <td>
+      Опис
+    </td>
+  </tr>
+  <tr *ngFor="let mechanicalResource of mechanicalResources$ | async">
+    <td>{{mechanicalResource.name}}</td>
+    <td>{{mechanicalResource.description}}</td>
+    <button (click)="openDetails(mechanicalResource.id)">Промени</button>
+    <button (click)="delete(mechanicalResource.id)">Избриши</button>
+  </tr>
+</table>
