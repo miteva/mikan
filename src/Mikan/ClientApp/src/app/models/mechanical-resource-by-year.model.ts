@@ -1,12 +1,11 @@
 // osnovni sredstva po godina
-import {MechanicalResourcesModel} from './mechanical-resources.model';
+import {MechanicalResources} from './mechanical.resources';
 
-export class MechanicalResourceByYearModel {
+export class MechanicalResourcePerYear {
   id: number;
-  mechanicalResource: MechanicalResourcesModel;
+  mechanicalResource: MechanicalResources;
   year: number;
   amortization: number; // percenatage
   value: number;
-  status: string;
   description: string;
 }

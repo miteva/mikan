@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MechanicalResourcesService} from '../mechanical-resources.service';
-import {MechanicalResourcesModel} from '../../models/mechanical-resources.model';
+import {MechanicalResourcesService} from '../../../services/mechanical-resources.service';
+import {MechanicalResources} from '../../../models/mechanical.resources';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class MechanicalResourcesEditComponent implements OnInit {
 
-  mechanicalResource: MechanicalResourcesModel;
+  mechanicalResource: MechanicalResources;
 
   constructor(private _service: MechanicalResourcesService,
     private _route: ActivatedRoute,
@@ -25,13 +25,13 @@ export class MechanicalResourcesEditComponent implements OnInit {
           this.mechanicalResource = response;
         });
       } else {
-        this.mechanicalResource = new MechanicalResourcesModel();
+        this.mechanicalResource = new MechanicalResources();
       }
     });
   }
 
   save() {
-    this._service.update(this.mechanicalResource).subscribe(response => {
+    this._service.save(this.mechanicalResource).subscribe(response => {
       this._router.navigate(['mechanical-resources']);
     });
   }

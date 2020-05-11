@@ -1,0 +1,7 @@
+<button (click)="add()">Додади</button>
+
+
+<mk-table [data]="mechanicalResourcesPerYear$|async"
+          [columns]="columns"
+          (onDelete)="delete($event)"
+          (onEdit)="edit($event)"></mk-table>

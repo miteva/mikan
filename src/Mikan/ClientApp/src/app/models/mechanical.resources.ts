@@ -1,5 +1,5 @@
 // osnovni sredstva
-export class MechanicalResourcesModel {
+export class MechanicalResources {
   id: number;
   name: string;
   description: string;

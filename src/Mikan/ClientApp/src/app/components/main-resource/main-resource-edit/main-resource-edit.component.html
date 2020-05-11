@@ -1,0 +1,30 @@
+<div>
+  <div>
+    Име
+    <input type="text" [(ngModel)]="mainResource.name">
+  </div>
+  <div>
+    Опис
+    <input type="text" [(ngModel)]="mainResource.description">
+  </div>
+  <div>
+    Кп Бројка
+    <input type="text" [(ngModel)]="mainResource.kpNumber">
+  </div>
+  <div>
+    Година од
+    <input type="number" [(ngModel)]="mainResource.yearFrom">
+  </div>
+  <div>
+    Година до
+    <input type="number" [(ngModel)]="mainResource.yearTo">
+  </div>
+  <div>
+    Големина
+    <input type="number" [(ngModel)]="mainResource.size">
+  </div>
+
+  <button (click)="save()">Зачувај</button>
+</div>
+
+

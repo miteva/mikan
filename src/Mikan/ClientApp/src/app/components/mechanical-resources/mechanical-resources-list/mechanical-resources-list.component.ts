@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {MechanicalResourcesService} from '../mechanical-resources.service';
+import {MechanicalResourcesService} from '../../../services/mechanical-resources.service';
 import {Observable} from 'rxjs';
-import {MechanicalResourcesModel} from '../../models/mechanical-resources.model';
+import {MechanicalResources} from '../../../models/mechanical.resources';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class MechanicalResourcesListComponent implements OnInit {
 
-  mechanicalResources$: Observable<MechanicalResourcesModel[]>;
+  mechanicalResources$: Observable<MechanicalResources[]>;
 
   constructor(private _service: MechanicalResourcesService,
     private _router: Router,

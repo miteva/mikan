@@ -10,7 +10,7 @@ export class HomePagePage {
 
   }
 
-  onMechanicalResourcesClick() {
-    this._router.navigate(['/mechanical-resources']);
+  onClick(route: string) {
+    this._router.navigate([route]);
   }
 }

@@ -1,0 +1,62 @@
+<div>
+  <div>
+    <mat-form-field>
+      <mat-label>Нива</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let resource of resources$|async"
+                    [value]="resourceAction.resource"
+                    (onSelectionChange)="updateResource(resource)">
+          {{resource.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Акција</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let action of actions$|async"
+                    [value]="resourceAction.action"
+                    (onSelectionChange)="updateAction(action)">
+          {{action.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div>
+    Опис
+    <input type="text" matInput [(ngModel)]="resourceAction.description">
+  </div>
+
+  <div>
+    Датум
+    <!--    todo nate-->
+    <!--    <input type="number" matInput [(ngModel)]="mechanicalResourcePerYear.year">-->
+  </div>
+
+  <div>
+    Добивка
+    <input type="number" matInput [(ngModel)]="resourceAction.resource">
+  </div>
+  <div>
+    Трошоци
+    <input type="number" matInput [(ngModel)]="resourceAction.expenses">
+  </div>
+
+  <div>
+    Произведено
+    <input type="number" matInput [(ngModel)]="resourceAction.produced">
+  </div>
+
+  <div>
+    Продадено
+    <input type="number" matInput [(ngModel)]="resourceAction.sold">
+  </div>
+
+
+  <button (click)="save()">Зачувај</button>
+</div>
+
+

@@ -1,28 +1,28 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import {MechanicalResourcesModel} from '../models/mechanical-resources.model';
+import {MechanicalResources} from '../models/mechanical.resources';
 
 @Injectable()
 export class MechanicalResourcesService {
 
-  findAll(): Observable<MechanicalResourcesModel[]> {
-    const mechanicalResource = new MechanicalResourcesModel();
+  findAll(): Observable<MechanicalResources[]> {
+    const mechanicalResource = new MechanicalResources();
     mechanicalResource.id = 1;
     mechanicalResource.name = 'test name';
     mechanicalResource.description = 'desc';
     return of([mechanicalResource]);
   }
 
-  findOne(id:number): Observable<MechanicalResourcesModel> {
-    const mechanicalResource = new MechanicalResourcesModel();
+  findOne(id: number): Observable<MechanicalResources> {
+    const mechanicalResource = new MechanicalResources();
     mechanicalResource.id = 1;
     mechanicalResource.name = 'test name';
     mechanicalResource.description = 'desc';
     return of(mechanicalResource);
   }
 
-  update(mechanicalResource: MechanicalResourcesModel) {
-    const mechanicalResource1 = new MechanicalResourcesModel();
+  save(mechanicalResource: MechanicalResources) {
+    const mechanicalResource1 = new MechanicalResources();
     mechanicalResource1.id = 1;
     mechanicalResource.name = 'test name';
     mechanicalResource1.description = 'desc';
