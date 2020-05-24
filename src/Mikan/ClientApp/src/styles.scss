@@ -1,0 +1,47 @@
+
+.btn-primary, button {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+td, th {
+  margin: 10px;
+  min-width: 150px;
+
+  button {
+    align-content: center;
+  }
+}
+
+tr {
+  margin-bottom: 10px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  min-height: 100px;
+
+  label {
+    min-width: 150px;
+  }
+
+  textarea {
+    min-width: 500px;
+    min-height: 100px;
+  }
+}
+
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+}

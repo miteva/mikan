@@ -24,7 +24,7 @@ export class ResourceListComponent implements OnInit {
   }
 
   add() {
-    this._router.navigate(['/new'], {relativeTo: this._route});
+    this._router.navigate(['new'], {relativeTo: this._route});
   }
 
   delete(row: any) {

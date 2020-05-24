@@ -23,6 +23,6 @@ export class ActionListComponent implements OnInit {
   }
 
   add() {
-    this._router.navigate([':id'], {relativeTo: this._route});
+    this._router.navigate(['id'], {relativeTo: this._route});
   }
 }

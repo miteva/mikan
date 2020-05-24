@@ -1,3 +1,4 @@
+Механика:
 <button (click)="new()">Креирај</button>
 <table>
   <tr>
@@ -5,11 +6,17 @@
     <td>
       Опис
     </td>
+    <td>Иницијална вредност</td>
   </tr>
   <tr *ngFor="let mechanicalResource of mechanicalResources$ | async">
     <td>{{mechanicalResource.name}}</td>
     <td>{{mechanicalResource.description}}</td>
-    <button (click)="openDetails(mechanicalResource.id)">Промени</button>
-    <button (click)="delete(mechanicalResource.id)">Избриши</button>
+    <td>{{mechanicalResource.initialValue}}</td>
+    <td>
+      <button (click)="openDetails(mechanicalResource.id)">Промени</button>
+    </td>
+    <td>
+      <button (click)="delete(mechanicalResource.id)">Избриши</button>
+    </td>
   </tr>
 </table>

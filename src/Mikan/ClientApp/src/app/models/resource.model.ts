@@ -5,7 +5,7 @@ export class Resource {
   id: number;
   name: string;
   mainResource: MainResource;
-  descripiton: string;
+  description: string;
   size: number;
   resourceSubType: ResourceSubType;
   year: number;

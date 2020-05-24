@@ -1,12 +1,15 @@
-<div>
-  <div>
-    Име
+Тип на култура:
+<div class="wrap">
+  <div class="column">
+    <label>Име</label>
     <input type="text" matInput [(ngModel)]="resourceSubType.name">
   </div>
 
-  <div>
-    Опис
+  <div class="column">
+    <label>Опис</label>
     <input type="number" matInput [(ngModel)]="resourceSubType.description">
   </div>
- <button (click)="save()">Зачувај</button>
+  <div class="column">
+    <button (click)="save()">Зачувај</button>
+  </div>
 </div>

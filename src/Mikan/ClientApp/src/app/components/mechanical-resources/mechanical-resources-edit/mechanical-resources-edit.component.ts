@@ -5,7 +5,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'mechanical-resources-edit',
-  templateUrl: './mechanical-resources-edit.component.html'
+  templateUrl: './mechanical-resources-edit.component.html',
+  styleUrls:['./mechanical-resources-edit.component.scss']
 })
 export class MechanicalResourcesEditComponent implements OnInit {
 

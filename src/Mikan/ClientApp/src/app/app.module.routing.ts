@@ -13,6 +13,8 @@ import {ActionListComponent} from './components/action/action-list/action-list.c
 import {ActionEditComponent} from './components/action/action-edit/action-edit.component';
 import {ResourceActionListComponent} from './components/resource-action/resource-action-list/resource-action-list.component';
 import {ResourceActionEditComponent} from './components/resource-action/resource-action-edit/resource-action-edit.component';
+import {ResourceListComponent} from './components/resource/resource-list/resource-list.component';
+import {ResourceEditComponent} from './components/resource/resource-edit/resource-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -101,7 +103,7 @@ const appRoutes: Routes = [
         component: ActionEditComponent
       },
       {
-        path: ':id',
+        path: 'id',
         component: ActionEditComponent
       }
     ]
@@ -120,6 +122,23 @@ const appRoutes: Routes = [
       {
         path: ':id',
         component: ResourceActionEditComponent
+      }
+    ]
+  },
+  {
+    path: 'resource',
+    children: [
+      {
+        path: '',
+        component: ResourceListComponent
+      },
+      {
+        path: 'new',
+        component: ResourceEditComponent
+      },
+      {
+        path: ':id',
+        component: ResourceEditComponent
       }
     ]
   }

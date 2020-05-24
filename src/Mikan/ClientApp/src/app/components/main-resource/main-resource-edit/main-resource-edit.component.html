@@ -1,30 +1,34 @@
-<div>
-  <div>
-    Име
+Парцела:
+
+<div class="wrap">
+  <div class="column">
+    <label>Име</label>
     <input type="text" [(ngModel)]="mainResource.name">
   </div>
-  <div>
-    Опис
+  <div class="column">
+    <label>Опис</label>
     <input type="text" [(ngModel)]="mainResource.description">
   </div>
-  <div>
-    Кп Бројка
+  <div class="column">
+    <label>Кп Бројка</label>
     <input type="text" [(ngModel)]="mainResource.kpNumber">
   </div>
-  <div>
-    Година од
+  <div class="column">
+    <label>Година од</label>
     <input type="number" [(ngModel)]="mainResource.yearFrom">
   </div>
-  <div>
-    Година до
+  <div class="column">
+    <label>Година до</label>
     <input type="number" [(ngModel)]="mainResource.yearTo">
   </div>
-  <div>
-    Големина
+  <div class="column">
+    <label>Големина</label>
     <input type="number" [(ngModel)]="mainResource.size">
   </div>
 
-  <button (click)="save()">Зачувај</button>
+  <div class="column">
+    <button (click)="save()">Зачувај</button>
+  </div>
 </div>
 
 
