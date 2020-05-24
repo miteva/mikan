@@ -1,0 +1,18 @@
+
+Акција:
+<div class="wrap">
+  <div class="column">
+    <label>
+      Име
+    </label>
+    <input type="text" [(ngModel)]="action.name">
+  </div>
+
+  <div class="column">
+    <label>Опис</label>
+    <input type="number" [(ngModel)]="action.description">
+  </div>
+  <div class="column">
+    <button (click)="save()">Зачувај</button>
+  </div>
+</div>

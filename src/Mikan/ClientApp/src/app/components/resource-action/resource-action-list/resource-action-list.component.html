@@ -1,0 +1,8 @@
+Акција
+<button (click)="add()">Додади</button>
+
+
+<mk-table [data]="resourceActions$|async"
+          [columns]="columns"
+          (onEdit)="edit($event)"
+          (onDelete)="delete($event)"></mk-table>

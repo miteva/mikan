@@ -1,0 +1,65 @@
+Акција:
+<div class="wrap">
+  <div class="column">
+    <label>Нива</label>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let resource of resources$|async"
+                    [value]="resourceAction.resource"
+                    (onSelectionChange)="updateResource(resource)">
+          {{resource.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="column">
+    <label>Акција</label>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let action of actions$|async"
+                    [value]="resourceAction.action"
+                    (onSelectionChange)="updateAction(action)">
+          {{action.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="column">
+    <label>Датум</label>
+    <!--    todo nate-->
+    <input type="date" [(ngModel)]="resourceAction.date">
+  </div>
+
+  <div class="column">
+    <label>Добивка</label>
+    <input type="number" [(ngModel)]="resourceAction.resource">
+  </div>
+  <div class="column">
+    <label>Трошоци</label>
+    <input type="number" [(ngModel)]="resourceAction.expenses">
+  </div>
+
+  <div class="column">
+    <label>Произведено</label>
+    <input type="number" [(ngModel)]="resourceAction.produced">
+  </div>
+
+  <div class="column">
+    <label>Продадено</label>
+    <input type="number" [(ngModel)]="resourceAction.sold">
+  </div>
+
+
+  <div class="column">
+    <label>Опис</label>
+    <textarea [(ngModel)]="resourceAction.description"> </textarea>
+  </div>
+
+  <div class="column">
+    <button (click)="save()">Зачувај</button>
+  </div>
+</div>
+
+

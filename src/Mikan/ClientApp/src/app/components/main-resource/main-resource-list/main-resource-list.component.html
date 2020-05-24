@@ -1,0 +1,8 @@
+Парцела:
+<button (click)="new()">Креирај</button>
+
+
+<mk-table [data]="mainResources$|async"
+          [columns]="columns"
+          (onDelete)="delete($event)"
+          (onEdit)="edit($event)"></mk-table>

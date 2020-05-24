@@ -1,0 +1,19 @@
+Механика:
+<div class="wrap">
+  Промени детали:
+  <div class="column">
+    <label>Име:</label>
+    <input [(ngModel)]="mechanicalResource.name"/>
+  </div>
+  <div class="column">
+    <label>Опис:</label>
+    <textarea [(ngModel)]="mechanicalResource.description"></textarea>
+  </div>
+  <div class="column">
+    <label>Иницијална вредност:</label>
+    <input type="number" [(ngModel)]="mechanicalResource.initialValue"/>
+  </div>
+  <div class="column">
+    <button class="btn-primary" (click)="save()">Зачувај</button>
+  </div>
+</div>

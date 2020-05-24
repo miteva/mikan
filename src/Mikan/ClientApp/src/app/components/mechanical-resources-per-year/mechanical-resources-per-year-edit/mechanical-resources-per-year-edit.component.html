@@ -1,0 +1,36 @@
+Механика по година:
+<div class="wrap">
+  <div class="column">
+    <label>Механизација:</label>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let mechanicalResource of mechanicalResources$|async"
+                    [value]="mechanicalResourcePerYear.mechanicalResource"
+                    (onSelectionChange)="updateSelection(mechanicalResource)">
+          {{mechanicalResource.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="column">
+    <label>Година</label>
+    <input type="number" [(ngModel)]="mechanicalResourcePerYear.year"/>
+  </div>
+
+  <div class="column">
+    <label>Амортизација</label>
+    <input type="number" [(ngModel)]="mechanicalResourcePerYear.amortization">
+  </div>
+  <div class="column">
+    <label>Вредност</label>
+    <input type="number" [(ngModel)]="mechanicalResourcePerYear.value">
+  </div>
+
+  <div class="column">
+    <label>Опис</label>
+    <textarea [(ngModel)]="mechanicalResourcePerYear.description"> </textarea>
+  </div>
+  <div class="column">
+    <button (click)="save()">Зачувај</button>
+  </div>
+</div>

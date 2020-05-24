@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th *ngFor="let column of columns">
+      {{column.label}}
+    </th>
+    <th *ngIf="shouldEdit">
+      Промени
+    </th>
+    <th *ngIf="shouldDelete">Избриши</th>
+  </tr>
+  <tbody *ngIf="data && data.length">
+  <tr *ngFor="let row of data">
+    <td *ngFor="let column of columns">
+      {{data[column.name]}}
+    </td>
+    <td *ngIf="shouldEdit">
+      <button (click)="edit(row)">Промени</button>
+    </td>
+    <td *ngIf="shouldDelete">
+      <button (click)="delete(row)">Избриши</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
