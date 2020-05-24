@@ -1,0 +1,14 @@
+.wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+.column{
+  min-height: 100px;
+
+
+  textarea{
+    min-width: 500px;
+    min-height: 100px;
+  }
+}

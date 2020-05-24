@@ -1,0 +1,49 @@
+Нива:
+<div class="wrap">
+  <div class="column">
+    <label>Име</label>
+    <input type="text" [(ngModel)]="resource.name">
+  </div>
+  <div class="column">
+    <label>Парцела</label>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let mainResource of mainResources$|async"
+                    [value]="resource.mainResource"
+                    (onSelectionChange)="updateSelection(mainResource)">
+          {{mainResource.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="column">
+    <label>Опис</label>
+    <input type="text" [(ngModel)]="resource.description">
+  </div>
+
+  <div class="column">
+    <label>Големина</label>
+    <input type="number" [(ngModel)]="resource.size">
+  </div>
+
+  <div class="column">
+    <label>Култура</label>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let type of resourceSubTypes$|async"
+                    [value]="type.name"
+                    (onSelectionChange)="updateType(type)">
+          {{type.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+  <div class="column">
+    <label>Година</label>
+    <input type="number" [(ngModel)]="resource.year">
+  </div>
+  <div class="column">
+    <button (click)="save()">Зачувај</button>
+  </div>
+</div>
