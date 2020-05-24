@@ -7,6 +7,10 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200405194942_InitialCreate.cs" />
     <Compile Remove="Migrations\20200405194942_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20200524175516_Update-Models-Removed-Action.cs" />
+    <Compile Remove="Migrations\20200524175516_Update-Models-Removed-Action.Designer.cs" />
+    <Compile Remove="Migrations\20200524180045_Update-Models.cs" />
+    <Compile Remove="Migrations\20200524180045_Update-Models.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <Folder Include="Configuration\" />
   </ItemGroup>
 
 </Project>

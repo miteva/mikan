@@ -7,7 +7,7 @@ namespace Mikan.BL.Interfaces
 {
     public interface IMachineService
     {
-        void AddMachine(Machine machine);
-        List<Machine> GetTopThreeMachines();
+        //void AddMachine(Machine machine);
+        //List<Machine> GetTopThreeMachines();
     }
 }

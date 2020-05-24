@@ -12,23 +12,23 @@ namespace Mikan.Controllers
   [Route("[controller]/[action]")]
   public class MachineController : ControllerBase
   {
-    private readonly IMachineService _machineService;
-    public MachineController(IMachineService machineService)
-    {
-      _machineService = machineService;
-    }
+    //private readonly IMachineService _machineService;
+    //public MachineController(IMachineService machineService)
+    //{
+    //  _machineService = machineService;
+    //}
 
-    [HttpGet]
-    public IEnumerable<Machine> Index()
-    {
-      return _machineService.GetTopThreeMachines();
-    }
+    //[HttpGet]
+    //public IEnumerable<Machine> Index()
+    //{
+    //  return _machineService.GetTopThreeMachines();
+    //}
 
-    [HttpPost]
-    public void Add(Machine machine)
-    {
-       _machineService.AddMachine(machine);
-    }
+    //[HttpPost]
+    //public void Add(Machine machine)
+    //{
+    //   _machineService.AddMachine(machine);
+    //}
 
   }
 }
