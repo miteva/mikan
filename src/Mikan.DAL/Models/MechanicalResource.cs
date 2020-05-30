@@ -13,7 +13,7 @@ namespace Mikan.DAL.Models
 
     public string Description { get; set; }
 
-    public int initialValue;
+    public int initialValue { get; set; }
 
   }
 }

@@ -10,7 +10,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class MechanicalResourcesEditComponent implements OnInit {
 
-  mechanicalResource: MechanicalResources;
+  mechanicalResource: MechanicalResources = new MechanicalResources();
 
   constructor(private _service: MechanicalResourcesService,
     private _route: ActivatedRoute,
@@ -25,9 +25,7 @@ export class MechanicalResourcesEditComponent implements OnInit {
         this._service.findOne(id).subscribe(response => {
           this.mechanicalResource = response;
         });
-      } else {
-        this.mechanicalResource = new MechanicalResources();
-      }
+      } 
     });
   }
 

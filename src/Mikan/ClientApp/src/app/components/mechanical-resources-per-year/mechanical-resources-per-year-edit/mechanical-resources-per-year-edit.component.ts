@@ -41,6 +41,8 @@ export class MechanicalResourcesPerYearEditComponent implements OnInit {
   }
 
   save() {
-    this._router.navigate(['mechanical-resources-per-year']);
-  }
+    this._service.save(this.mechanicalResourcePerYear).subscribe(response => {
+      this._router.navigate(['mechanical-resources-per-year']);
+    })
+      }
 }

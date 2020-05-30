@@ -9,7 +9,7 @@ namespace Mikan.DAL.Models
   {
     public int Id { get; set; }
 
-   // public AgricultureAction Action { get; set; }
+    public AgricultureAction Action { get; set; }
     public String Description { get; set; }
     public DateTime Date { get; set; }
     public int Expenses { get; set; }

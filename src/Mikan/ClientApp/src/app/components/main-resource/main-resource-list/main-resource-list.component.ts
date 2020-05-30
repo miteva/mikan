@@ -29,7 +29,7 @@ export class MainResourceListComponent implements OnInit {
   }
 
   delete(row: MainResource) {
-    this._service.delete(row.id);
+    this._service.delete(row.id).subscribe();
   }
 
   edit(row: MainResource) {

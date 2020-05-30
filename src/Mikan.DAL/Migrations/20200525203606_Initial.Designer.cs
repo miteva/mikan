@@ -10,8 +10,8 @@ using Mikan.DAL;
 namespace Mikan.DAL.Migrations
 {
     [DbContext(typeof(AgricultureContext))]
-    [Migration("20200524181845_Update-Models")]
-    partial class UpdateModels
+    [Migration("20200525203606_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -81,6 +81,9 @@ namespace Mikan.DAL.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("initialValue")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

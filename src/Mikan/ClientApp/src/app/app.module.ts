@@ -8,9 +8,6 @@ import {AppComponent} from './app.component';
 import {NavMenuComponent} from './nav-menu/nav-menu.component';
 import {HomeComponent} from './home/home.component';
 import {CounterComponent} from './counter/counter.component';
-import {FetchDataComponent} from './fetch-data/fetch-data.component';
-import {MachineComponent} from './machine/machine.component';
-import {AddMachineComponent} from './add-machine/add-machine.component';
 import {MechanicalResourcesListComponent} from './components/mechanical-resources/mechanical-resources-list/mechanical-resources-list.component';
 import {MechanicalResourcesService} from './services/mechanical-resources.service';
 import {MechanicalResourcesEditComponent} from './components/mechanical-resources/mechanical-resources-edit/mechanical-resources-edit.component';
@@ -82,10 +79,7 @@ const modules = [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    MachineComponent,
-    AddMachineComponent
+    CounterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
@@ -93,10 +87,7 @@ const modules = [
     FormsModule,
     ...modules,
     RouterModule.forRoot([
-      {path: 'counter', component: CounterComponent},
-      {path: 'fetch-data', component: FetchDataComponent},
-      {path: 'machine', component: MachineComponent},
-      {path: 'add-machine', component: AddMachineComponent}
+      {path: 'counter', component: CounterComponent}
     ]),
     MatFormFieldModule,
     MatSelectModule,
