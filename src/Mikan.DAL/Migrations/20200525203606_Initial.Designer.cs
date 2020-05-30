@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mikan.DAL;
 
 namespace Mikan.DAL.Migrations
 {
     [DbContext(typeof(AgricultureContext))]
-    partial class AgricultureContextModelSnapshot : ModelSnapshot
+    [Migration("20200525203606_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,9 +160,6 @@ namespace Mikan.DAL.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ActionId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -183,8 +182,6 @@ namespace Mikan.DAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ActionId");
 
                     b.HasIndex("ResourceId");
 
@@ -229,10 +226,6 @@ namespace Mikan.DAL.Migrations
 
             modelBuilder.Entity("Mikan.DAL.Models.ResourceAction", b =>
                 {
-                    b.HasOne("Mikan.DAL.Models.AgricultureAction", "Action")
-                        .WithMany()
-                        .HasForeignKey("ActionId");
-
                     b.HasOne("Mikan.DAL.Models.Resource", "Resource")
                         .WithMany()
                         .HasForeignKey("ResourceId");
