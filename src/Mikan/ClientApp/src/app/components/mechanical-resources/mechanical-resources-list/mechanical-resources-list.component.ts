@@ -3,6 +3,7 @@ import {MechanicalResourcesService} from '../../../services/mechanical-resources
 import {Observable} from 'rxjs';
 import {MechanicalResources} from '../../../models/mechanical.resources';
 import {ActivatedRoute, Router} from '@angular/router';
+import mechanicalResourceColumn from './mechanical-resource.column';
 
 @Component({
   selector: 'mechanical-resources-list',
@@ -12,6 +13,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class MechanicalResourcesListComponent implements OnInit {
 
   mechanicalResources$: Observable<MechanicalResources[]>;
+  mechanicalResourceColumn = mechanicalResourceColumn;
 
   constructor(private _service: MechanicalResourcesService,
     private _router: Router,
@@ -23,16 +25,16 @@ export class MechanicalResourcesListComponent implements OnInit {
     this.mechanicalResources$ = this._service.findAll();
   }
 
-  openDetails(id: any) {
-    this._router.navigate([`mechanical-resources/${id}`]);
+  edit(row: any) {
+    this._router.navigate([`mechanical-resources/${row.id}`]);
   }
 
-  delete(id: any) {
-    this._service.delete(id);
+  delete(row: any) {
+    this._service.delete(row.id).subscribe();
   }
 
   new() {
     this._router.navigate(['new'], {relativeTo: this._route});
-
   }
+
 }

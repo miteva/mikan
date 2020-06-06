@@ -3,8 +3,6 @@
 
 
 <mk-table [data]="resources$|async"
-          [shouldDelete]="true"
-          [shouldEdit]="true"
           [columns]="columns"
           (onEdit)="edit($event)"
           (onDelete)="delete($event)"></mk-table>

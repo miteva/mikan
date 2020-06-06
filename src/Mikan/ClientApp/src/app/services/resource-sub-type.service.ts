@@ -21,4 +21,7 @@ export class ResourceSubTypeService {
     return this.http.post<ResourceSubType>('api/resource-sub-type', action);
   }
 
+  delete(id: any) {
+    return this.http.delete('api/resource-sub-type', id);
+  }
 }

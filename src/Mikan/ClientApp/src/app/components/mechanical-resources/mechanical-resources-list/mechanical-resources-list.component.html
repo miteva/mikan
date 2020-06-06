@@ -1,22 +1,8 @@
 Механика:
 <button (click)="new()">Креирај</button>
-<table>
-  <tr>
-    <td>Име</td>
-    <td>
-      Опис
-    </td>
-    <td>Иницијална вредност</td>
-  </tr>
-  <tr *ngFor="let mechanicalResource of mechanicalResources$ | async">
-    <td>{{mechanicalResource.name}}</td>
-    <td>{{mechanicalResource.description}}</td>
-    <td>{{mechanicalResource.initialValue}}</td>
-    <td>
-      <button (click)="openDetails(mechanicalResource.id)">Промени</button>
-    </td>
-    <td>
-      <button (click)="delete(mechanicalResource.id)">Избриши</button>
-    </td>
-  </tr>
-</table>
+
+<mk-table
+  [data]="mechanicalResources$ | async"
+  [columns]="mechanicalResourceColumn"
+  (onEdit)="edit($event)"
+  (onDelete)="delete($event)"></mk-table>

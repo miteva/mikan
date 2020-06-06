@@ -26,4 +26,12 @@ export class ResourceSubTypeListComponent implements OnInit {
   add() {
     this._router.navigate(['new'], {relativeTo: this._route});
   }
+
+  edit(row: any) {
+    this._router.navigate([row.id], {relativeTo: this._route});
+  }
+
+  delete(row: any) {
+    this._service.delete(row.id).subscribe();
+  }
 }

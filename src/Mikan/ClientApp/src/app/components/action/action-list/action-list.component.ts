@@ -25,4 +25,12 @@ export class ActionListComponent implements OnInit {
   add() {
     this._router.navigate(['id'], {relativeTo: this._route});
   }
+
+  delete(action) {
+    this._service.delete(action.id).subscribe();
+  }
+
+  edit(action) {
+    this._router.navigate([`action/${action.id}`]);
+  }
 }

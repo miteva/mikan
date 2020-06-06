@@ -21,4 +21,7 @@ export class ActionService {
     return this.http.post<Action>(`api/action`, action);
   }
 
+  delete(id: any) {
+    return this.http.delete(`api/action`, id);
+  }
 }
