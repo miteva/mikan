@@ -9,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'mechanical-resources-per-year-edit',
   templateUrl: './mechanical-resources-per-year-edit.component.html',
-  styleUrls:['./mechanical-resources-per-year-edit.component.scss']
+  styleUrls: ['./mechanical-resources-per-year-edit.component.scss']
 })
 export class MechanicalResourcesPerYearEditComponent implements OnInit {
 
@@ -43,6 +43,6 @@ export class MechanicalResourcesPerYearEditComponent implements OnInit {
   save() {
     this._service.save(this.mechanicalResourcePerYear).subscribe(response => {
       this._router.navigate(['mechanical-resources-per-year']);
-    })
-      }
+    });
+  }
 }
